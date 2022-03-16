@@ -266,10 +266,12 @@ const resolvers = {
         stageByName: (parent, args) => stages.filter(stage => stage.name === args.name),
         eventByName: (parent, args) => events.filter(event => event.name === args.name),
         eventsInApp: (parent,  args) => {
-            let eventIdsPerAppEvent = []
-            let eventsInApp = []
-            for (let i in events) {
-                if (eventIdsPerAppEvent.indexOf(events[i].eventId) < 0 && events[i].appId === args.appId) {
+            let eventIdsPerAppEvent: string[] = []
+            let eventsInApp: object[] = []
+            let i: any = 0
+
+            for (i in events) {
+                if (eventIdsPerAppEvent.indexOf(events[i].id) < 0 && events[i].appId === args.appId) {
                     eventsInApp.push(events[i])
                 }
             }
