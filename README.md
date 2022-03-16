@@ -105,7 +105,7 @@ Error: npm ls -prod -json -depth=1 failed with code 1
  2. ```serverless deploy --stage prod```
 
 ###Google
-Google lead me this [issue](https://github.com/serverless/serverless/issues/9187) on the Serverless Repo.
+Google lead me this to this [issue](https://github.com/serverless/serverless/issues/9187) on the Serverless Repo.
 
 Which lead me down a rabbit hole of these [issues](https://github.com/serverless-heaven/serverless-webpack/issues?q=depth) on the Serverless-Webpack Repo.
 
