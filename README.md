@@ -62,7 +62,7 @@ Your project must use Node (TypeScript or JavaScript) for the query resolvers. Y
     ```
      npm start
     ```
-4. Point browser to [http://localhost:4000](http://localhost:4000) and click "Query your server" to explore with graph with Apollo Studio.
+4. Point browser to [http://localhost:4000](http://localhost:4000) and click "Query your server" to explore the graph with Apollo Studio.
 
 ---
 
@@ -105,13 +105,13 @@ Error: npm ls -prod -json -depth=1 failed with code 1
  2. ```serverless deploy --stage prod```
 
 ###Google
-Google lead me this to this [issue](https://github.com/serverless/serverless/issues/9187) on the Serverless Repo.
+Google lead me to this [issue](https://github.com/serverless/serverless/issues/9187) on the Serverless Repo.
 
 Which lead me down a rabbit hole of these [issues](https://github.com/serverless-heaven/serverless-webpack/issues?q=depth) on the Serverless-Webpack Repo.
 
 ###Solutions I tried:
 
-1. removing ```package-lock.json``` & ```node_modules``` and using ```npm install`` to reinstall the dependencies
+1. removing ```package-lock.json``` & ```node_modules``` and using ```npm install``` to reinstall the dependencies
 2. updating to latest ```serverless-webpack``` & ```webpack``` versions
 3. changing the node.js ```provider.runtime``` in the ```serverless.yml``` from ```nodejs12.x``` to ```nodejs14.x```
 
