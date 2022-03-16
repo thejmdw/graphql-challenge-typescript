@@ -102,16 +102,16 @@ Error: npm ls -prod -json -depth=1 failed with code 1
 
 ```
 
-###Steps to Recreate Problem
+### Steps to Recreate Problem
  1. ```git checkout thejmdw-aws```
  2. ```serverless deploy --stage prod```
 
-###Google
+### Google
 Google lead me to this [issue](https://github.com/serverless/serverless/issues/9187) on the Serverless Repo.
 
 Which lead me down a rabbit hole of these [issues](https://github.com/serverless-heaven/serverless-webpack/issues?q=depth) on the Serverless-Webpack Repo.
 
-###Solutions I tried:
+### Solutions I tried:
 
 1. removing ```package-lock.json``` & ```node_modules``` and using ```npm install``` to reinstall the dependencies
 2. updating to latest ```serverless-webpack``` & ```webpack``` versions
