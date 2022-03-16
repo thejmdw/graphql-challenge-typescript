@@ -278,16 +278,16 @@ const resolvers = {
             return eventsInApp
         },
         stagesInApp: (parent, args) => {
-            let allStageIdsInApp = []
-            
-            for (let i in events) {
+            let allStageIdsInApp: string[] = []
+            let i: any = 0
+            for (i in events) {
                 if (events[i].appId === args.appId) {
                     allStageIdsInApp.push(events[i].stageId)
                 } 
             }
             let uniqueStageIdsInApp = [...new Set(allStageIdsInApp)]
             
-            let stagesInApp = []
+            let stagesInApp: object[] = []
             
             for (let i in uniqueStageIdsInApp) {
                 for (let j in stages) {
