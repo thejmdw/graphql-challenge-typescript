@@ -1,0 +1,27 @@
+{
+  "name": "aloompa-typescript-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejmdw/graphql-challenge-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thejmdw/graphql-challenge-typescript/issues"
+  },
+  "homepage": "https://github.com/thejmdw/graphql-challenge-typescript#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.4",
+    "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
+}
