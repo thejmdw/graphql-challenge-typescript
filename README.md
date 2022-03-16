@@ -31,6 +31,8 @@ Your project must use Node (TypeScript or JavaScript) for the query resolvers. Y
 
 # TypeScript Solution
 
+#### [JavaScript Solution Here](https://github.com/thejmdw/graphql-challenge)
+
 ### Technologies Used
 
 
