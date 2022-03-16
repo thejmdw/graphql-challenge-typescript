@@ -242,7 +242,8 @@ const removeStage = args => {
     return args.id
 }
 const removeEvent = args => {
-    for (let i in events) {
+    let i: any = 0
+    for (i in events) {
         if(events[i].id === args.id) {
             events.splice(i, 1)
         }
@@ -313,7 +314,7 @@ const resolvers = {
         eventsAtStage: (parent, args) => events.filter(event => event.stageId === args.stageId),
         eventsBetweenTwoDates: (parent, args) => {
             
-            let eventsDuringTimes = []
+            let eventsDuringTimes: object[] = []
             
             for ( let i in events) {
                 if (events[i].startsAt >= args.startsAt && events[i].endsAt <= args.endsAt) {
