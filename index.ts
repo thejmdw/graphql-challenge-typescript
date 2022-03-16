@@ -226,7 +226,8 @@ const updateEvent = args => {
 }
 //Remove Mutation Resolver Functions
 const removeApp = args => {
-    for (let i in apps) {
+    let i: any = 0
+    for (i in apps) {
         if(apps[i].id === args.id) {
             apps.splice(i, 1)
         }
