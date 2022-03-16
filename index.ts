@@ -234,7 +234,8 @@ const removeApp = args => {
     return args.id
 }
 const removeStage = args => {
-    for (let i in stages) {
+    let i: any = 0
+    for (i in stages) {
         if(stages[i].id === args.id) {
             stages.splice(i, 1)
         }
