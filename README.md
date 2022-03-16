@@ -23,7 +23,7 @@ Your project must use Node (TypeScript or JavaScript) for the query resolvers. Y
 - [x] You should be able to add, update and remove all entities
 
 ### Extra Credit:
-- [ ] Your project is deployed to AWS
+- [ ] Your project is deployed to AWS ([JavaScript & AWS Solution Here](https://github.com/thejmdw/graphql-challenge))
 - [x] Your repo has a README
 - [x] You use TypeScript
 
@@ -38,11 +38,7 @@ Your project must use Node (TypeScript or JavaScript) for the query resolvers. Y
 
 ### Running the API
 
-### **Short Way
-
-1. Click [Here](https://bzbkpb4mae.execute-api.us-east-1.amazonaws.com/dev/) to go straight to the API and start exploring with Apollo Studio.
-
-### **Long Way
+### **Locally
 #### Prerequisites
 
 1. Install [Node.js](https://nodejs.org/en/)
@@ -67,3 +63,43 @@ Your project must use Node (TypeScript or JavaScript) for the query resolvers. Y
      npm start
     ```
 4. Point browser to [http://localhost:4000](http://localhost:4000) and click "Query your server" to explore with graph with Apollo Studio.
+
+---
+
+# Problem Encountered
+
+Attempting to deploy to AWS using Serverless yields the following error: 
+
+```
+serverless deploy --stage prod
+
+Running "serverless" from node_modules
+
+Deploying aloompa-typescript-challenge to stage prod (us-east-1)
+Bundling with Webpack...
+asset index.js 33.4 KiB [emitted] (name: index)
+./index.ts 11.8 KiB [built] [code generated]
+external "apollo-server-lambda" 42 bytes [built] [code generated]
+external "uuid" 42 bytes [built] [code generated]
+external "graphql-type-long" 42 bytes [built] [code generated]
+webpack compiled successfully in 1570 ms
+
+✖ Stack aloompa-typescript-challenge-prod failed to deploy (2s)
+Environment: darwin, node 16.14.0, framework 3.7.5 (local) 3.7.5v (global), plugin 6.1.5, SDK 4.3.2
+Credentials: Local, "default" profile
+Docs:        docs.serverless.com
+Support:     forum.serverless.com
+Bugs:        github.com/serverless/serverless/issues
+
+Error:
+Error: npm ls -prod -json -depth=1 failed with code 1
+    at ChildProcess.<anonymous> (/Users/thejmdw/workspace/take-homes/aloompa-ts/node_modules/serverless-webpack/lib/utils.js:91:16)
+    at ChildProcess.emit (node:events:520:28)
+    at ChildProcess.emit (node:domain:475:12)
+    at maybeClose (node:internal/child_process:1092:16)
+
+```
+
+Google lead me this [issue](https://github.com/serverless/serverless/issues/9187) on the Serverless Repo.
+
+Which lead me to this [issue]()
